@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GSoC 2026: Bringing Safe C to Space with RTEMS"
-date:   2026-05-24 18:00:00 +0530
+date:   2026-05-24 14:00:00 +0530
 categories: gsoc rtems
 ---
 
