@@ -7,7 +7,7 @@ categories: gsoc rtems c11
 
 **Author:** Yash Bhiwania | **Organization:** RTEMS Project | **Mentors:** Joel Sherrill, Wayne Thornton
 
-*(Optional: Insert an RTEMS or GSoC Banner Image Here)*
+<img width="846" height="427" alt="Screenshot 2026-08-19 004006" src="https://github.com/user-attachments/assets/714fb694-f6af-4745-8276-e2c2073d6a37" />
 
 As a 3rd-year B.Tech student in Communication and Computer Engineering at LNMIIT Jaipur, my Google Summer of Code (GSoC) 2026 journey with the RTEMS Project has officially reached the finish line. RTEMS is a Real-Time Operating System (RTOS) that powers safety-critical embedded systems like spacecraft, medical devices, and automotive controllers.
 
