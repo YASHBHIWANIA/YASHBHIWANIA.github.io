@@ -23,6 +23,7 @@ Because RTEMS uses Newlib as its standard C library, which lacks the C11 Annex K
 *   **What Code Got Merged/Submitted:**
     *   **Core RSB Recipe Integration:** [Merge Request !287](https://gitlab.rtems.org/rtems/tools/rtems-source-builder/-/merge_requests/287)
     *   **POSIX Compliance Tracking:** [Work Item #156](https://gitlab.rtems.org/rtems/docs/rtems-docs/-/work_items/156)
+    *   **Bare-Metal Test Scaffolding:** [Test suite](https://github.com/YASHBHIWANIA/rtems-safeclib-tests)
 *   **What's Left To Do:** Once MR !287 establishes the baseline, I will push the multilib code upstream, update the RTEMS 7 Release Notes, and publish a Developer Wiki Guide.
 
 ---
