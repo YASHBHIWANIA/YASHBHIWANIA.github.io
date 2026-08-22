@@ -20,10 +20,13 @@ Because RTEMS uses Newlib as its standard C library, which lacks the C11 Annex K
 *   **Project Goal:** Bring C11 Annex K bounds-checking functions to the RTEMS toolchain via `safeclib` integration.
 *   **What I Did:** I engineered the cross-compilation recipe for `safeclib` within the RSB, solved configure-time linker failures on bare-metal targets, wrapped the test suite in RTEMS standard tasks, and successfully built multilib support.
 *   **Current State:** The core RSB integration for per-BSP builds is complete and in active upstream review.
-*   **What Code Got Merged/Submitted:**
-    *   **Core RSB Recipe Integration:** [Merge Request !287](https://gitlab.rtems.org/rtems/tools/rtems-source-builder/-/merge_requests/287)
-    *   **POSIX Compliance Tracking:** [Work Item #156](https://gitlab.rtems.org/rtems/docs/rtems-docs/-/work_items/156)
-    *   **Bare-Metal Test Scaffolding:** [Test suite](https://github.com/YASHBHIWANIA/rtems-safeclib-tests)
+  ##  What Code Got Merged/Submitted:
+  * **Core RSB Recipe Integration:** [Merge Request !287](https://gitlab.rtems.org/rtems/tools/rtems-source-builder/-/merge_requests/287) 
+    * *Description:* Engineered the cross-compilation recipe for safeclib to build natively within the RTEMS Source Builder.
+* **POSIX Compliance Tracking:** [Work Item #156](https://gitlab.rtems.org/rtems/docs/rtems-docs/-/issues/156) 
+  * *Description:* Documented and mapped 67 standard C11 Annex K functions into the RTEMS POSIX Compliance master spreadsheet.
+* **Bare-Metal Test Scaffolding:** [rtems-safeclib-tests Repository](https://github.com/YASHBHIWANIA/rtems-safeclib-tests)
+  * *Description:* Engineered custom RTEMS initialization wrappers to allow standard C tests to run on bare-metal architectures, and authored 14 additional custom test cases to validate bounds-checking on the SPARC `erc32` simulator.    
 *   **What's Left To Do:** Once MR !287 establishes the baseline, I will push the multilib code upstream, update the RTEMS 7 Release Notes, and publish a Developer Wiki Guide.
 
 ---
