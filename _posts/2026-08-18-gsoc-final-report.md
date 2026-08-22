@@ -20,7 +20,7 @@ Because RTEMS uses Newlib as its standard C library, which lacks the C11 Annex K
 *   **Project Goal:** Bring C11 Annex K bounds-checking functions to the RTEMS toolchain via `safeclib` integration.
 *   **What I Did:** I engineered the cross-compilation recipe for `safeclib` within the RSB, solved configure-time linker failures on bare-metal targets, wrapped the test suite in RTEMS standard tasks, and successfully built multilib support.
 *   **Current State:** The core RSB integration for per-BSP builds is complete and in active upstream review.
-  ##  What Code Got Merged/Submitted:
+###   What Code Got Merged/Submitted:
   * **Core RSB Recipe Integration:** [Merge Request !287](https://gitlab.rtems.org/rtems/tools/rtems-source-builder/-/merge_requests/287) 
     * *Description:* Engineered the cross-compilation recipe for safeclib to build natively within the RTEMS Source Builder.
 * **POSIX Compliance Tracking:** [Work Item #156](https://gitlab.rtems.org/rtems/docs/rtems-docs/-/issues/156) 
