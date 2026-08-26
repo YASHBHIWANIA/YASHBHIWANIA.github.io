@@ -20,13 +20,17 @@ Because RTEMS uses Newlib as its standard C library, which lacks the C11 Annex K
 *   **Project Goal:** Bring C11 Annex K bounds-checking functions to the RTEMS toolchain via `safeclib` integration.
 *   **What I Did:** I engineered the cross-compilation recipe for `safeclib` within the RSB, solved configure-time linker failures on bare-metal targets, wrapped the test suite in RTEMS standard tasks, and successfully built multilib support.
 *   **Current State:** The core RSB integration for per-BSP builds is complete and in active upstream review.
-###   What Code Got Merged/Submitted:
-  * **Core RSB Recipe Integration:** [Merge Request !287](https://gitlab.rtems.org/rtems/tools/rtems-source-builder/-/merge_requests/287) 
-    * *Description:* Engineered the cross-compilation recipe for safeclib to build natively within the RTEMS Source Builder.
-* **POSIX Compliance Tracking:** [Work Item #156](https://gitlab.rtems.org/rtems/docs/rtems-docs/-/issues/156) 
-  * *Description:* Documented and mapped 67 standard C11 Annex K functions into the RTEMS POSIX Compliance master spreadsheet.
-* **Bare-Metal Test Scaffolding:** [rtems-safeclib-tests Repository](https://github.com/YASHBHIWANIA/rtems-safeclib-tests)
-  * *Description:* Engineered custom RTEMS initialization wrappers to allow standard C tests to run on bare-metal architectures, and authored 14 additional custom test cases to validate bounds-checking on the SPARC `erc32` simulator.    
+### What Code Got Merged/Submitted:
+* **Core RSB Recipe Integration:** [RSB Merge Request !287](https://gitlab.rtems.org/rtems/tools/rtems-source-builder/-/merge_requests/287)
+  * *Description:* RSB cross-compilation recipe for `safeclib`, refined with modular configs and base64 hashes based on maintainer feedback.
+* **Upstream Test Suite Submission:** [Safeclib Pull Request #172](https://github.com/rurban/safeclib/pull/172)
+  * *Description:* Submitted the pure C Annex K edge-case test suite (`test_baremetal_edges.c`) upstream.
+* **Upstream Feature Request:** [Safeclib Issue #171](https://github.com/rurban/safeclib/issues/171)
+  * *Description:* Opened an upstream issue requesting a proper `--disable-tests` configuration flag.
+* **RTEMS Workaround Tracking:** [RTEMS Tools Work Item #209](https://gitlab.rtems.org/rtems/tools/rtems-source-builder/-/work_items/209)
+  * *Description:* Tracked the temporary `sed` Makefile workaround until the upstream issue is resolved.
+* **POSIX Compliance Tracking:** [RTEMS Work Item #156](https://gitlab.rtems.org/rtems/tools/rtems-source-builder/-/work_items/156)
+  * *Description:* Mapped and documented C11 Annex K functions into the RTEMS compliance master spreadsheet.   
 *   **What's Left To Do:** Once MR !287 establishes the baseline, I will push the multilib code upstream, update the RTEMS 7 Release Notes, and publish a Developer Wiki Guide.
 
 ---
